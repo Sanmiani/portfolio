@@ -59,8 +59,7 @@
       align-items: center;
       justify-content: space-between;
     }
-    .nav-logo { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; }
-    .nav-logo span { color: var(--green); }
+    .nav-logo { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--green); }
     .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { font-size: 13px; font-weight: 600; color: var(--ink2); transition: color 0.2s; }
     .nav-links a:hover { color: var(--green); }
@@ -530,8 +529,7 @@
       justify-content: space-between;
       align-items: center;
     }
-    .footer-logo { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; }
-    .footer-logo span { color: var(--green); }
+    .footer-logo { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--green); }
     .footer-nav { display: flex; gap: 28px; list-style: none; }
     .footer-nav a { font-size: 13px; color: var(--muted); font-weight: 500; transition: color 0.2s; }
     .footer-nav a:hover { color: var(--green); }
@@ -607,7 +605,7 @@
         <span class="pulse"></span>
         Open to AI consulting &amp; partnerships
       </div>
-      <h1>AI Specialist.<br><em>Community</em><br>Builder. Founder.</h1>
+      <h1>AI Specialist.<br>Data Analyst.<br><em>Community</em><br>Builder. Founder.</h1>
       <p class="hero-sub">
         I work at the intersection of artificial intelligence, health, and culture — creating content and building systems that serve African men 35+ and the brands that want to reach them.
       </p>
@@ -968,6 +966,55 @@
     <span>Canada &middot; AI Specialist &middot; Founder, Strong After 35</span>
   </div>
 </footer>
+
+<script type="module">
+  import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!reduceMotion) {
+    // Hero entrance
+    animate(
+      ".hero-badge, .hero h1, .hero-sub, .hero-actions, .hero-trust",
+      { opacity: [0, 1], y: [16, 0] },
+      { duration: 0.6, delay: stagger(0.1), easing: "ease-out" }
+    );
+    animate(
+      ".hero-photo-wrap",
+      { opacity: [0, 1], scale: [0.96, 1] },
+      { duration: 0.7, delay: 0.25, easing: "ease-out" }
+    );
+
+    // Scroll-triggered reveals
+    const revealGroups = [
+      ".proof-inner > div",
+      ".service-card",
+      ".project-card",
+      ".skill-item",
+      ".stack-card",
+      ".about-text > *",
+      ".about-checks li",
+      ".info-row",
+      ".community-inner > div",
+      ".cta-band .container > *",
+      ".contact-card"
+    ];
+
+    revealGroups.forEach((selector) => {
+      inView(
+        selector,
+        (el) => {
+          animate(
+            el.target,
+            { opacity: [0, 1], y: [20, 0] },
+            { duration: 0.5, easing: "ease-out" }
+          );
+        },
+        { margin: "0px 0px -10% 0px" }
+      );
+    });
+  }
+</script>
 
 </body>
 </html>
