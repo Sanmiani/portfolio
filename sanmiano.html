@@ -252,6 +252,8 @@
   /* ───────── PROJECTS ───────── */
   .projects{ padding:110px 0; }
   .project-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+  .project-grid > .project-card:nth-child(3):last-child{ grid-column:1 / -1; }
+  .project-grid > .project-card:nth-child(3):last-child .project-tags{ max-width:520px; }
   .project-card{
     position:relative; padding:1.5px; border-radius:16px; background:var(--line);
     overflow:hidden;
@@ -493,6 +495,18 @@
               <span class="tag">Multi-Platform Publishing</span>
               <span class="tag">Meta Graph API</span>
               <span class="tag">Social Strategy</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-inner">
+            <h3>Sumbee Kitchen Sales &amp; Inventory Dashboard</h3>
+            <p>A recurring reporting workflow rebuilt into structured, automated dashboards for a food business — tracking revenue, food cost %, and waste against weekly sales and menu performance to guide pricing and purchasing decisions.</p>
+            <div class="project-tags">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Dashboards</span>
+              <span class="tag">KPI Reporting</span>
+              <span class="tag">Reporting Automation</span>
             </div>
           </div>
         </div>
