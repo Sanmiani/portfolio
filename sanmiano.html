@@ -131,10 +131,11 @@
   #particles{ position:absolute; inset:0; z-index:0; pointer-events:none; }
   .hero-inner{ position:relative; z-index:1; display:grid; grid-template-columns:1fr auto; gap:40px; align-items:start; }
   .hero-kicker{
-    margin-bottom:22px; font-size:clamp(.85rem,1.4vw,1.05rem); font-weight:800;
-    letter-spacing:.14em; color:var(--terracotta); flex-wrap:wrap; row-gap:6px; gap:16px;
+    margin-bottom:22px; font-size:clamp(.6rem,2.4vw,1.05rem); font-weight:800;
+    letter-spacing:.1em; color:var(--terracotta); flex-wrap:nowrap; gap:clamp(8px,1.8vw,16px);
+    white-space:nowrap; max-width:100%;
   }
-  .hero-kicker::before{ width:30px; }
+  .hero-kicker::before{ width:30px; flex-shrink:0; }
   .hero-name{
     font-family:var(--serif); font-weight:800; font-style:normal;
     font-size:clamp(2.6rem,7vw,5.2rem); line-height:1.02; letter-spacing:-.01em;
