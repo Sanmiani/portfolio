@@ -352,6 +352,17 @@
     .project-body h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 8px; }
     .project-body p { font-size: 14px; color: var(--ink2); line-height: 1.78; margin-bottom: 16px; flex: 1; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--green);
+      transition: gap 0.2s;
+    }
+    .project-card:hover .project-link { gap: 10px; }
 
     /* ── SKILLS ── */
     .skills-layout {
@@ -744,6 +755,7 @@
             <span class="tag">Community Building</span>
             <span class="tag">Instagram Reels</span>
           </div>
+          <span class="project-link">View on Instagram &rarr;</span>
         </div>
       </a>
 
@@ -787,6 +799,7 @@
             <span class="tag">OpenAI API</span>
             <span class="tag">Full-Stack</span>
           </div>
+          <span class="project-link">Visit Live App &rarr;</span>
         </div>
       </a>
 
