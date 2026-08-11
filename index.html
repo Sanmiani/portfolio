@@ -270,6 +270,41 @@
     }
     .hero-float-card-bottom span { font-size: 11px; color: rgba(255,255,255,0.7); font-weight: 500; }
 
+    /* ── LOGO STRIP ── */
+    .logo-strip {
+      padding: 32px 28px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-strip-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .logo-strip-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .logo-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink2);
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+    .logo-chip:hover { opacity: 1; }
+    .logo-chip .ico { font-size: 17px; }
+
     /* ── PROOF BAR ── */
     .proof-bar {
       background: #111111;
@@ -528,6 +563,35 @@
     .contact-card h5 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
     .contact-card p { font-size: 11px; color: rgba(255,255,255,0.44); }
 
+    .contact-form {
+      max-width: 480px;
+      margin: 0 auto 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+    .contact-form .hidden { display: none; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-family: var(--font);
+      font-size: 14px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .contact-form input:focus,
+    .contact-form textarea:focus { outline: none; border-color: var(--green); background: rgba(255,255,255,0.1); }
+    .contact-form textarea { resize: vertical; min-height: 110px; font-family: var(--font); }
+    .contact-form button { align-self: flex-start; }
+    .contact-form-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: -2px; }
+
     /* ── FOOTER ── */
     footer {
       background: var(--bg2);
@@ -649,6 +713,19 @@
 
   </div>
 </section>
+
+<!-- ── LOGO STRIP ── -->
+<div class="logo-strip">
+  <div class="logo-strip-inner">
+    <span class="logo-strip-label">Built With</span>
+    <span class="logo-chip"><span class="ico">🧠</span> Claude</span>
+    <span class="logo-chip"><span class="ico">⚡</span> n8n</span>
+    <span class="logo-chip"><span class="ico">📁</span> Notion</span>
+    <span class="logo-chip"><span class="ico">🎨</span> Canva</span>
+    <span class="logo-chip"><span class="ico">📊</span> Gamma</span>
+    <span class="logo-chip"><span class="ico">▲</span> Next.js</span>
+  </div>
+</div>
 
 <!-- ── PROOF BAR ── -->
 <div class="proof-bar">
@@ -982,6 +1059,17 @@
     <span class="eyebrow">Work With Me</span>
     <h2>Let's build<br><em>something real.</em></h2>
     <p>AI consulting, brand partnerships, content collaborations, or speaking engagements — reach out. I respond to every message.</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="What are you working on?" required></textarea>
+      <button type="submit" class="btn btn-green">Send Message</button>
+      <span class="contact-form-note">Or reach me directly below.</span>
+    </form>
+
     <div class="cta-actions">
       <a href="mailto:mattsanmiano@gmail.com" class="btn btn-white">mattsanmiano@gmail.com</a>
       <a href="https://instagram.com/strongafter35afrimen" target="_blank" class="btn btn-ghost">Follow on Instagram</a>
@@ -1049,6 +1137,7 @@
 
     // Scroll-triggered reveals
     const revealGroups = [
+      ".logo-chip",
       ".proof-inner > div",
       ".service-card",
       ".project-card",
