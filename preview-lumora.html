@@ -430,7 +430,7 @@ footer.site-footer{position:relative;overflow:hidden;border-radius:var(--radius-
 <!-- ===== HERO ===== -->
 <section id="home">
   <div class="liquid" id="liquid-container">
-    <img src="images/lumora/after.jpg" alt="" id="liquid-base">
+    <img src="images/lumora/before.jpg" alt="" id="liquid-base">
     <canvas aria-hidden="true" id="liquid-canvas"></canvas>
   </div>
   <div class="hero-vignette"></div>
@@ -1136,7 +1136,7 @@ if (!reduceMotion) {
 
   const afterImg = new Image();
   afterImg.crossOrigin = 'anonymous';
-  afterImg.src = 'images/lumora/before.jpg';
+  afterImg.src = 'images/lumora/after.jpg';
 
   const cover = document.createElement('canvas');
   const coverCtx = cover.getContext('2d');
