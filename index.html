@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matt Sanmiano — AI Specialist & Community Builder</title>
-  <meta name="description" content="Matt Sanmiano is an AI Specialist, content creator, and founder of Strong After 35 — a community for African men 35+ focused on health, AI, and modern opportunities.">
+  <meta name="description" content="Matt Sanmiano is an AI Specialist, app builder, content creator, and founder of Strong After 35 — a community for African men 35+ focused on health, AI, and modern opportunities. He also builds custom apps and tools for small businesses.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -331,6 +331,7 @@
       gap: 20px;
       margin-top: 44px;
     }
+    .services-grid > .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .service-card {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -679,11 +680,11 @@
     <div>
       <div class="hero-badge">
         <span class="pulse"></span>
-        Open to AI consulting &amp; partnerships
+        Open to AI consulting, app builds &amp; partnerships
       </div>
       <h1>AI Specialist.<br>Data Analyst.<br><em>Community</em><br>Builder. Founder.</h1>
       <p class="hero-sub">
-        I work at the intersection of artificial intelligence, health, and culture — creating content and building systems that serve African men 35+ and the brands that want to reach them.
+        I work at the intersection of artificial intelligence, health, and culture — creating content, shipping apps, and building systems that serve African men 35+, small businesses, and the brands that want to reach them.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-green">Work With Me</a>
@@ -700,9 +701,9 @@
     <div class="hero-photo-wrap">
       <div class="hero-photo-frame">
         <img
-          src="images/Sanmiano.jpg"
+          src="images/Sanmiano-2026.jpg"
           alt="Matt Sanmiano — AI Specialist and Community Builder"
-          onerror="this.src='images/headshot.jpg';"
+          onerror="this.src='images/Sanmiano.jpg';"
         >
         <div class="hero-photo-overlay">
           <div class="hero-photo-name">Matt Sanmiano</div>
@@ -724,6 +725,8 @@
     <span class="logo-chip"><span class="ico">🎨</span> Canva</span>
     <span class="logo-chip"><span class="ico">📊</span> Gamma</span>
     <span class="logo-chip"><span class="ico">▲</span> Next.js</span>
+    <span class="logo-chip"><span class="ico">📱</span> Expo</span>
+    <span class="logo-chip"><span class="ico">🚀</span> Vercel</span>
   </div>
 </div>
 
@@ -753,7 +756,7 @@
 <section id="work" style="background:var(--bg2);">
   <div class="container">
     <span class="eyebrow">What I Do</span>
-    <h2 class="section-title">Four things.<br>Done seriously.</h2>
+    <h2 class="section-title">Five things.<br>Done seriously.</h2>
     <div class="rule"></div>
     <div class="services-grid">
 
@@ -800,12 +803,25 @@
         <img class="svc-photo" src="images/services/group-travel.jpg" alt="Group travel experiences" loading="lazy">
         <div class="svc-num">04</div>
         <h3>Group Travel Experiences</h3>
-        <p>Strong After 35 Travel curates world-class group experiences for African men 35+ — brotherhood, adventure, and destinations that matter. First trip shipped: Punta Cana, Dominican Republic (May 2026). Next stops: Jamaica, Accra, Cape Town.</p>
+        <p>Strong After 35 Travel curates world-class group experiences for African men 35+ — brotherhood, adventure, and destinations that matter. First trip shipped: Punta Cana, Dominican Republic (May 2026). Next stops: Jamaica, Accra, Cape Town. Now building Muster, a web app that takes the back-and-forth out of planning a group trip.</p>
         <div class="service-tags">
           <span class="tag">Group Trips</span>
           <span class="tag">Punta Cana ✓</span>
           <span class="tag">Brotherhood</span>
           <span class="tag">Community Events</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img class="svc-photo" src="images/projects/invoice-tools.jpg" alt="Custom invoice tool built for a small business" loading="lazy">
+        <div class="svc-num">05</div>
+        <h3>Custom Apps &amp; Tools for Small Businesses</h3>
+        <p>Under Sanmiano Design I build the software small businesses actually need — invoicing tools, expense trackers, booking-ready websites, mobile apps — scoped in days, not months, and delivered ready to use. First paid engagement shipped August 2026: a custom invoice generator for Metheq Cuisine.</p>
+        <div class="service-tags">
+          <span class="tag">Sanmiano Design</span>
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">Expo / React Native</span>
+          <span class="tag">Websites</span>
         </div>
       </div>
 
@@ -852,6 +868,22 @@
         </div>
       </div>
 
+      <a class="project-card" href="https://muster-iota.vercel.app" target="_blank" rel="noopener">
+        <div class="project-visual"><img src="images/projects/muster.jpg" alt="Muster group trip planner landing page" loading="lazy"></div>
+        <div class="project-body">
+          <div class="project-type">Group Trip Planner &middot; Live App &middot; Full-Stack</div>
+          <h3>Muster</h3>
+          <p>Takes the back-and-forth out of planning a group trip. The organiser shares one link; everyone sets a private budget, marks the dates they can do, and swipes through real venues. Muster works out the date and 2&ndash;3 plans the group votes on, and a deadline forces the decision. Spec to production in one day: passwordless sign-in, Postgres via Prisma, live venue data, analytics, and an accessibility pass.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Prisma / Postgres</span>
+            <span class="tag">Vercel</span>
+          </div>
+          <span class="project-link">Visit Live App &rarr;</span>
+        </div>
+      </a>
+
       <div class="project-card">
         <div class="project-visual"><img src="images/projects/mytripscan.jpg" alt="Passport and travel documents" loading="lazy"></div>
         <div class="project-body">
@@ -882,6 +914,36 @@
       </a>
 
       <div class="project-card">
+        <div class="project-visual"><img src="images/projects/sumbee-expense.jpg" alt="Sumbee Expense Tracker lock screen" loading="lazy"></div>
+        <div class="project-body">
+          <div class="project-type">Mobile App &middot; Expo / React Native &middot; Small Business</div>
+          <h3>Sumbee Expense Tracker</h3>
+          <p>An offline-first expense tracker for a catering business: passcode and biometric lock, receipt capture with on-device OCR, searchable history, period reports, and CSV export. Went from a written PRD to a clickable PWA prototype for owner testing, then to a native iOS and Android build with Expo.</p>
+          <div class="project-tags">
+            <span class="tag">Expo / React Native</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">On-Device OCR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-visual"><img src="images/projects/invoice-tools.jpg" alt="Sanmiano Design invoice" loading="lazy"></div>
+        <div class="project-body">
+          <div class="project-type">Client Work &middot; Google Apps Script &middot; Sanmiano Design</div>
+          <h3>Small-Business Invoicing Tools</h3>
+          <p>Custom invoice generators for two food businesses, Metheq Cuisine and Sumbee Kitchen, built on Google Apps Script with Google Sheets as the datastore. Branded PDF invoices, one-tap email and share links, auto-numbering, discounts and tax, partial payments, and a monthly report. Phone-friendly so staff can invoice from the counter. Delivered to Metheq Cuisine as a paid engagement, August 2026.</p>
+          <div class="project-tags">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">PDF Automation</span>
+            <span class="tag">Paid Client Work</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
         <div class="project-visual"><img src="images/projects/jarvis.jpg" alt="Smart voice assistant speaker" loading="lazy"></div>
         <div class="project-body">
           <div class="project-type">AI Agent &middot; Voice &middot; Automation</div>
@@ -906,6 +968,21 @@
             <span class="tag">Punta Cana ✓</span>
             <span class="tag">Group Trips</span>
             <span class="tag">Brotherhood</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-visual"><img src="images/projects/spa-website.jpg" alt="Les Délices du Spa website" loading="lazy"></div>
+        <div class="project-body">
+          <div class="project-type">Web Development &middot; Local SEO &middot; Service Business</div>
+          <h3>Les D&eacute;lices du Spa Website</h3>
+          <p>A mobile-first website for a mobile massage and facial service: online booking embed, ZIP-code service-area checker with travel-fee calculator, deposit and cancellation policy, tip button, and local SEO schema. Every business fact lives in one config file, so the owner can change prices and hours without touching the page.</p>
+          <div class="project-tags">
+            <span class="tag">HTML / CSS / JS</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">Booking Flow</span>
+            <span class="tag">Pre-Launch</span>
           </div>
         </div>
       </div>
@@ -958,6 +1035,8 @@
           <div class="skill-item"><span class="ico">🎨</span> Motion Design &amp; HTML-Based Video Production</div>
           <div class="skill-item"><span class="ico">🌐</span> AI-Assisted Web Development (HTML / CSS)</div>
           <div class="skill-item"><span class="ico">🧱</span> Full-Stack App Development (Next.js, React, TypeScript)</div>
+          <div class="skill-item"><span class="ico">📱</span> Mobile App Development (Expo / React Native)</div>
+          <div class="skill-item"><span class="ico">🧾</span> Google Workspace Automation (Apps Script, Sheets)</div>
           <div class="skill-item"><span class="ico">🤝</span> Community Building &amp; Brand Strategy</div>
           <div class="skill-item"><span class="ico">✍️</span> Long-form &amp; Short-form Copywriting</div>
           <div class="skill-item"><span class="ico">📊</span> Data Analysis &amp; Business Reporting</div>
@@ -975,6 +1054,9 @@
           <div class="stack-card"><div class="ico">🎬</div><h5>GSAP</h5><p>Animation &amp; motion design</p></div>
           <div class="stack-card"><div class="ico">▲</div><h5>Next.js</h5><p>Full-stack app framework</p></div>
           <div class="stack-card"><div class="ico">🔌</div><h5>OpenAI API</h5><p>AI-powered app features</p></div>
+          <div class="stack-card"><div class="ico">📱</div><h5>Expo / React Native</h5><p>iOS &amp; Android apps</p></div>
+          <div class="stack-card"><div class="ico">🚀</div><h5>Vercel + Netlify</h5><p>Deployment &amp; hosting</p></div>
+          <div class="stack-card"><div class="ico">🧾</div><h5>Google Apps Script</h5><p>Small-business tooling</p></div>
           <div class="stack-card"><div class="ico">📁</div><h5>Notion + Drive</h5><p>Knowledge management</p></div>
           <div class="stack-card"><div class="ico">📅</div><h5>Google Workspace</h5><p>AI-connected scheduling</p></div>
         </div>
@@ -1000,7 +1082,8 @@
           <li><span class="chk">&#10003;</span> AI-assisted content across 3 platforms, published 3&times; per week</li>
           <li><span class="chk">&#10003;</span> Custom AI operating system connecting 8+ live tools</li>
           <li><span class="chk">&#10003;</span> First Strong After 35 group trip shipped — Punta Cana, May 2026</li>
-          <li><span class="chk">&#10003;</span> Building full-stack AI apps: MyTripScan, AI Adoption Advisor, Jarvis</li>
+          <li><span class="chk">&#10003;</span> Shipped full-stack apps: Muster, AI Adoption Advisor, Sumbee Expense Tracker, Jarvis, MyTripScan</li>
+          <li><span class="chk">&#10003;</span> First paid client build delivered under Sanmiano Design — August 2026</li>
           <li><span class="chk">&#10003;</span> Growing skills in vibe coding, motion design &amp; AI automation</li>
           <li><span class="chk">&#10003;</span> Community-first approach — building trust before building revenue</li>
         </ul>
@@ -1030,7 +1113,7 @@
         </div>
         <div class="info-row">
           <span class="ico">🎯</span>
-          <div><h5>Open To</h5><p>AI consulting, brand partnerships, content collaborations, speaking</p></div>
+          <div><h5>Open To</h5><p>AI consulting, custom apps &amp; tools for small businesses, brand partnerships, content collaborations, speaking</p></div>
         </div>
       </div>
 
@@ -1058,7 +1141,7 @@
   <div class="container">
     <span class="eyebrow">Work With Me</span>
     <h2>Let's build<br><em>something real.</em></h2>
-    <p>AI consulting, brand partnerships, content collaborations, or speaking engagements — reach out. I respond to every message.</p>
+    <p>AI consulting, a custom app or tool for your business, brand partnerships, content collaborations, or speaking engagements — reach out. I respond to every message.</p>
 
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
       <input type="hidden" name="form-name" value="contact">
