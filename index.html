@@ -386,6 +386,7 @@
       transform: translateY(-3px);
     }
     .project-card.featured { grid-column: span 2; }
+    .project-card.span-2 { grid-column: span 2; }
     .project-visual {
       height: 140px;
       background: var(--bg2);
@@ -657,6 +658,7 @@
     @media (max-width: 700px) {
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-column: span 1; }
+      .project-card.span-2 { grid-column: span 1; }
       .proof-inner { grid-template-columns: repeat(2, 1fr); }
       .stack-grid { grid-template-columns: 1fr; }
     }
@@ -913,21 +915,6 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-visual"><img src="images/projects/edewa.jpg" alt="Èdè Wa Yorùbá learning app home screen" loading="lazy"></div>
-        <div class="project-body">
-          <div class="project-type">Language Learning &middot; PWA &middot; In Development</div>
-          <h3>&Egrave;d&egrave; Wa: Learn Yor&ugrave;b&aacute;</h3>
-          <p>A family-first Yor&ugrave;b&aacute; learning app for diaspora parents and their kids. Ten-minute lessons in themed stages (home and family, numbers to 100), each ending in a quiz, plus a memory game, streaks, a phrasebook, and a parent dashboard. Installable and works offline, with progress saved on the device. Lesson content goes to native-speaker review before public launch.</p>
-          <div class="project-tags">
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Vite PWA</span>
-            <span class="tag">In Development</span>
-          </div>
-        </div>
-      </div>
-
       <a class="project-card" href="https://ai-adoption-advisor.vercel.app" target="_blank" rel="noopener">
         <div class="project-visual"><img src="images/projects/ai-adoption-advisor.jpg" alt="Business consulting meeting" loading="lazy"></div>
         <div class="project-body">
@@ -1046,7 +1033,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card span-2">
         <div class="project-visual"><img src="images/projects/animation.jpg" alt="Video editing timeline" loading="lazy"></div>
         <div class="project-body">
           <div class="project-type">Motion Design &middot; Instagram Reels</div>
@@ -1127,7 +1114,7 @@
           <li><span class="chk">&#10003;</span> AI-assisted content across 3 platforms, published 3&times; per week</li>
           <li><span class="chk">&#10003;</span> Custom AI operating system connecting 8+ live tools</li>
           <li><span class="chk">&#10003;</span> First Strong After 35 group trip shipped — Punta Cana, May 2026</li>
-          <li><span class="chk">&#10003;</span> Shipped full-stack apps: Muster, AI Adoption Advisor, Sumbee Expense Tracker, Jarvis, MyTripScan, &Egrave;d&egrave; Wa</li>
+          <li><span class="chk">&#10003;</span> Shipped full-stack apps: Muster, AI Adoption Advisor, Sumbee Expense Tracker, Jarvis, MyTripScan</li>
           <li><span class="chk">&#10003;</span> First paid client build delivered under Sanmiano Design — August 2026</li>
           <li><span class="chk">&#10003;</span> Growing skills in vibe coding, motion design &amp; AI automation</li>
           <li><span class="chk">&#10003;</span> Community-first approach — building trust before building revenue</li>
